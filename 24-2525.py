@@ -1,11 +1,10 @@
-file = open('24-1.txt', 'r')
-string = file.readline()
+file = open('Source/24-1.txt', 'r')
 temp = ''
 max = 0
 
-for i in range (0, len(string)):
-    if (string[i] in ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']):
-        temp += string[i]
+for char in file.readline():
+    if (char in '0123456789'):
+        temp += char
     else:
         if (temp != ''):
             temp = int(temp)
