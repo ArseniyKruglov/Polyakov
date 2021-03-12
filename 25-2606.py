@@ -1,16 +1,14 @@
 primes = []
-for i in range(2, int(315675 ** 0.5) + 1):
-    prime = True
-    
+for i in range(2, 315675 + 1):
     for j in range(2, int(i ** 0.5) + 1):
         if i % j == 0:
-            prime = False
-            
-    if prime:
+            break
+    else:
         primes.append(i)
 
 c = 0
-max = [0, [0, 0]]
+max_i = 0
+max_difference = 0
 
 for i in range(238941, 315675 + 1):
     dividers = []
@@ -25,19 +23,20 @@ for i in range(238941, 315675 + 1):
             prime_dividers.append(divider)
 
     ok = False
-
     for prime_divider_1 in prime_dividers:
         for prime_divider_2 in prime_dividers:
             if prime_divider_1 != prime_divider_2 and prime_divider_1 * prime_divider_2 == i:
                 ok = True
-
+                break
+        if ok:
+            break
     if ok:
         c += 1
+        if abs(prime_dividers[1] - prime_dividers[0]) > max_difference:
+            max_difference = abs(prime_dividers[1] - prime_dividers[0])
+            max_i = i
 
-        if prime_dividers[1] - prime_dividers[0] > max[0]:
-            max = [prime_dividers[1] - prime_dividers[0], prime_dividers]
-
-print(c, max[1])
+print(c, max_i)
     
             
     
