@@ -1,17 +1,21 @@
-file = open('24-1.txt', 'r')
+#Текстовый файл 24-1.txt состоит не более чем из 106 символов - заглавных латинских букв и цифр. Убывающей подпоследовательностью будем называть последовательность символов, расположенных в порядке уменьшения их номера в кодовой таблице символов ASCII. Найдите наибольшую убывающую подпоследовательность в этом файле, запишите в ответе номер символа в файле, с которого она начинается (нумерация символов начинается с 1). Если таких последовательностей несколько, используйте первую из них
+
+file = open('Source/24-1.txt', 'r')
 string = file.readline()
 length = 0
-max = 0
-result = 0
+max_length = 0
+answer = 0
 
-for i in range (0, len(string) - 1):
+for i in range(0, len(string) - 1):
     if (ord(string[i]) > ord(string[i + 1])):
         length += 1
     else:
+        length += 1
+        
+        if (length > max_length):
+            max_length = length
+            answer = i - length + 1 + 1
+        
         length = 0
 
-    if (length > max):
-        max = length
-        result = i - length + 1 + 1
-
-print(result)
+print(answer)
