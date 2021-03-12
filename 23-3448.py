@@ -5,6 +5,7 @@ c = 0
 
 for commands in set(itertools.product([0, 1, 2], repeat = 6)):
     n = 1
+    
     for command in commands:
         if command == 0:
             n += 1
@@ -12,6 +13,7 @@ for commands in set(itertools.product([0, 1, 2], repeat = 6)):
             n += 2
         elif command == 2:
             n *= 2
+            
     a.append(n)
 
 for n in set(a):

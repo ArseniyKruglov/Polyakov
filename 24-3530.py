@@ -1,21 +1,22 @@
-file = open('24-153.txt', 'r')
-string = file.readline()
+file = open('Source/24-153.txt', 'r')
 
 look = False
 temp = ''
 c = 0
 
-for i in range(0, len(string)):
-    if string[i] == 'A':
+for char in file.readline():
+    if char == 'A':
         look = True
 
     if look:
-        temp += string[i]
+        temp += char
 
-    if string[i] == 'F':
+    if char == 'F':
         look = False
         if 7 <= len(temp) and len(temp) <= 10:
             c += 1
         temp = ''
 
 print(c)
+
+# Ответ не совпадает
