@@ -1,12 +1,11 @@
-file = open('C:\\PABCWork.NET\\Py\\files\\27-51b.txt','r')
+file = open('Source/27-51b.txt', 'r')
 
 min = 0
 even = 0
 odd = 0
 
-n = int(file.readline())
-for i in range(0, n):
-    c1 , c2 = list(map(int, file.readline().strip().split(' ')))
+for i in range(0, int(file.readline())):
+    c1, c2 = list(map(int, file.readline().strip().split(' ')))
 
     if c1 > c2:
         min += c2
@@ -28,10 +27,9 @@ else:
         odds = []
         h = even
         l = odd
-        file = open('C:\\PABCWork.NET\\Py\\files\\27-51b.txt','r')
-        n = int(file.readline())
-        for i in range(0,n):
-            c1 , c2 = list(map(int, file.readline().strip().split(' ')))
+        file = open('Source/27-51b.txt', 'r')
+        for i in range(0, int(file.readline())):
+            c1, c2 = list(map(int, file.readline().strip().split(' ')))
             if (abs(c1 - c2) % 2 == 1):
                 odds.append(abs(c1 - c2))
         odds.sort()
@@ -48,10 +46,9 @@ else:
         evens = []
         j = even
         k = odd
-        file = open('C:\\PABCWork.NET\\Py\\files\\27-51b.txt','r')
-        n = int(file.readline())
-        for i in range(0,n):
-            c1 , c2 = list(map(int, file.readline().strip().split(' ')))
+        file = open('Source/27-51b.txt', 'r')
+        for i in range(0, int(file.readline())):
+            c1, c2 = list(map(int, file.readline().strip().split(' ')))
             if (abs(c1 - c2) % 2 == 1):
                 evens.append(abs(c1 - c2))
         evens.sort()
@@ -66,9 +63,6 @@ else:
             if (min % 2 == 0) and (odd > even):
                 break
         print(min)
-        
-        
-
         
     
     
