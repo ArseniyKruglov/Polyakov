@@ -17,13 +17,12 @@ for i in range(485617, 529678 + 1):
             dividers.append(i // j)
 
     if len(dividers) == 6:
-        ok = False
-        
         prime_dividers = []
         for divider in dividers:
             if divider in primes:
                 prime_dividers.append(divider)
-
+                
+        found = False
         for prime_divider_1 in prime_dividers:
             for prime_divider_2 in prime_dividers:
                 for prime_divider_3 in prime_dividers:
@@ -36,11 +35,11 @@ for i in range(485617, 529678 + 1):
                             min = the_prime_dividers[2] - the_prime_dividers[0]
                             min_i = i
 
-                        ok = True
+                        found = True
                         break
-                if ok:
+                if found:
                     break
-            if ok:
+            if found:
                 break
 
 print(c, min_i)
