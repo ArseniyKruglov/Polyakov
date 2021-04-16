@@ -6,7 +6,7 @@ for i in range(2, 529678 + 1):
     else:
         primes.append(i)
 
-c = 0
+count = 0
 min = 1000000
 
 for i in range(485617, 529678 + 1):
@@ -27,7 +27,7 @@ for i in range(485617, 529678 + 1):
             for prime_divider_2 in prime_dividers:
                 for prime_divider_3 in prime_dividers:
                     if prime_divider_1 != prime_divider_2 != prime_divider_3 and prime_divider_1 * prime_divider_2 * prime_divider_3 == i and prime_divider_1 % 10 == prime_divider_2 % 10 == prime_divider_3 % 10:
-                        c += 1
+                        count += 1
 
                         the_prime_dividers = [prime_divider_1, prime_divider_2, prime_divider_3]
                         the_prime_dividers.sort()
@@ -42,4 +42,4 @@ for i in range(485617, 529678 + 1):
             if found:
                 break
 
-print(c, min_i)
+print(count, min_i)

@@ -9,7 +9,7 @@ for i in range(2, int((345293 + 1) ** 0.5) + 1):
     if prime:
         primes.append(i)
 
-c = 0
+count = 0
 
 for i in range(158928, 345293 + 1):
     dividers = []
@@ -21,7 +21,7 @@ for i in range(158928, 345293 + 1):
     dividers.append(i)
 
     if len(dividers) == 8:
-        c += 1
+        count += 1
 
-print(c)
+print(count)
     

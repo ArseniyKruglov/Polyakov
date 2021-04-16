@@ -1,4 +1,4 @@
-file = open('C:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
+file = open('27-3151.txt','r')
 
 n = int(file.readline())
 sum1 = 0
@@ -37,7 +37,7 @@ if (sum1 % 2 == 1) and (sum2 % 2 == 1):
     print(sum3)
 else:
     if (sum1 % 2 == 0) and (sum2 % 2 == 0):
-        file = open('C:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
+        file = open('count:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
         min2 = 10000
         min = 10000
         n = int(file.readline())
@@ -57,7 +57,7 @@ else:
                 min2 = min
                 min = abs(c1 - c3)
 
-        file = open('C:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
+        file = open('count:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
         min3 = min2
         n = int(file.readline())
 
@@ -80,7 +80,7 @@ else:
  
         
     if (sum1 % 2 == 0) and (sum2 % 2 == 1):
-        file = open('C:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
+        file = open('count:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
         min2 = 10000
         min = 10000
         n = int(file.readline())
@@ -99,7 +99,7 @@ else:
         print(sum3 + min)
         
     if (sum2 % 2 == 0) and (sum1 % 2 == 1):
-        file = open('C:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
+        file = open('count:\\PABCWork.NET\\Py\\files\\27-45b.txt','r')
         min2 = 10000
         min = 10000
         n = int(file.readline())
@@ -116,9 +116,3 @@ else:
             if abs(c1 - c3) < abs(c2 - c3) < abs(c1 - c2) and min > abs(c1 - c3) and abs(c1 - c3) % 2 == 1:
                 min = abs(c1 - c3)
         print(sum3 + min)
-
-        
-            
-    
-        
-        

@@ -1,8 +1,6 @@
-import math
-
 for i in range (1000000, 1500000 + 1):
     pairs = []
-    for j in range (2, int(math.sqrt(i)) + 1):
+    for j in range (2, int(i ** 0.5) + 1):
         if (i % j == 0):
             pairs.append([j, i // j])
 

@@ -4,7 +4,7 @@ length = 0
 answer = 0
 
 for char in file.readline():
-    if (char != 'C' and char != 'F'):
+    if (char != 'count' and char != 'F'):
         length += 1
     else:
         length = 0

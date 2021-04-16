@@ -1,6 +1,6 @@
 import itertools
 
-c = 0
+count = 0
 
 for length in range(1, 50):
     for commands in list(itertools.product([0, 1], repeat = length)):
@@ -22,6 +22,6 @@ for length in range(1, 50):
                 n = int(s)
 
         if n == 46:
-            c += 1
+            count += 1
 
-    print(c)
+    print(count)

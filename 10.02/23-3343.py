@@ -1,6 +1,6 @@
 import itertools
 
-c = 0
+count = 0
 
 for commands in set(list(itertools.product([0, 1, 2], repeat = 6))):
     n = 1
@@ -16,6 +16,6 @@ for commands in set(list(itertools.product([0, 1, 2], repeat = 6))):
             n *= 2
             
     if n == 20:
-        c += 1
+        count += 1
 
-print(c)
+print(count)

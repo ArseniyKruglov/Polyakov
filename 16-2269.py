@@ -7,11 +7,11 @@ def F(n):
         else:
             return F(n - 1) + F(n - 3)
         
-c = 0
+count = 0
         
 for i in range(1, 100000):
     if F(i) < 10 ** 8:
-        c += 1
-        print(c)
+        count += 1
+        print(count)
 
-print(c)
+print(count)

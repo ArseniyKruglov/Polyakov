@@ -1,7 +1,7 @@
 import itertools
 
 a = []
-c = 0
+count = 0
 
 for commands in set(itertools.product([0, 1, 2], repeat = 6)):
     n = 1
@@ -18,7 +18,7 @@ for commands in set(itertools.product([0, 1, 2], repeat = 6)):
 
 for n in set(a):
     if 34 <= n and n <= 59:
-        c += 1
+        count += 1
 
-print(c)
+print(count)
         

@@ -1,8 +1,7 @@
-# Текстовый файл k8-10.txt состоит не более чем из 106 символов. Определите максимальное количество идущих подряд символов, среди которых каждые два соседних различны.
+file = open('Source/24-2525txt', 'r')
 
-file = open('Source/24-1.txt', 'r')
 temp = ''
-max = 0
+answer = 0
 
 for char in file.readline():
     if temp != '':
@@ -13,9 +12,9 @@ for char in file.readline():
     else:
         if (temp != ''):
             temp = int(temp)
-            if temp % 2 == 0 and temp > max:
-                max = temp
+            if temp % 2 == 0:
+                answer = max(answer, temp)
 
         temp = ''
 
-print(max)
+print(answer)

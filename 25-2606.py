@@ -6,7 +6,7 @@ for i in range(2, 315675 + 1):
     else:
         primes.append(i)
 
-c = 0
+count = 0
 max_i = 0
 max_difference = 0
 
@@ -31,12 +31,12 @@ for i in range(238941, 315675 + 1):
         if ok:
             break
     if ok:
-        c += 1
+        count += 1
         if abs(prime_dividers[1] - prime_dividers[0]) > max_difference:
             max_difference = abs(prime_dividers[1] - prime_dividers[0])
             max_i = i
 
-print(c, max_i)
+print(count, max_i)
     
             
     

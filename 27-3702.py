@@ -1,4 +1,4 @@
-file = open('Source/27-51b.txt', 'r')
+file = open('27-3702.txt', 'r')
 
 min = 0
 even = 0
@@ -63,8 +63,3 @@ else:
             if (min % 2 == 0) and (odd > even):
                 break
         print(min)
-        
-    
-    
-        
-    

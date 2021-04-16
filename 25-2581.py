@@ -1,4 +1,4 @@
-c = 0
+count = 0
 
 for i in range(4301614, 4301717 + 1):
     prime = True
@@ -9,5 +9,5 @@ for i in range(4301614, 4301717 + 1):
             break
 
     if prime:
-        c += 1
-        print(c, i)
+        count += 1
+        print(count, i)

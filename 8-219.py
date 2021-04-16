@@ -1,6 +1,6 @@
 import itertools
 
-c = 0
+count = 0
 look = False
 
 for word in sorted(set(itertools.product('АКРУ', repeat = 5))):
@@ -10,8 +10,8 @@ for word in sorted(set(itertools.product('АКРУ', repeat = 5))):
         look = True
 
     if look:
-        c += 1
+        count += 1
 
     if word == 'УКАРА':
-        print(c)
+        print(count)
         break

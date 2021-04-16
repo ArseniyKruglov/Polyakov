@@ -1,10 +1,10 @@
 import itertools
 
-c = []
+count = []
 
 for word in list(itertools.product('КАНТ', repeat = 6)):
     word = ''.join(word)
     if word.count('К') == 2:
-        c.append(word)
+        count.append(word)
 
-print(len(set(c)))
+print(len(set(count)))

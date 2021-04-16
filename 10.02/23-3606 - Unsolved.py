@@ -1,6 +1,6 @@
 import itertools
 
-c = 0
+count = 0
 
 for n in range (-10000, 10000):
     o = n
@@ -20,6 +20,6 @@ for n in range (-10000, 10000):
                     n += (n % 4)
 
             if n == 80:
-                c += 1
+                count += 1
 
-print(c)
+print(count)

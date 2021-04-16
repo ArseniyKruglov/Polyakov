@@ -1,4 +1,4 @@
-c = 0
+count = 0
 
 for i in range(1, 100000):
     i = hex(i)[2:]
@@ -15,6 +15,6 @@ for i in range(1, 100000):
                 break
                 
         if ok:
-            c += 1
+            count += 1
 
-print(c)
+print(count)

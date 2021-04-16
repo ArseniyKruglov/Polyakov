@@ -1,7 +1,7 @@
 import itertools
 
 a = [0, 1]
-c = []
+count = []
 
 l = list(itertools.product(a, repeat = 8))
 
@@ -19,6 +19,6 @@ for commands in l:
             n *= 3
 
     if 1000 <= n and n <= 1024:
-        c.append(n)
+        count.append(n)
 
-print(len(set(c)))
+print(len(set(count)))

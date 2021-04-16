@@ -15,9 +15,6 @@ for i in range(1, 256 + 1):
             
         if i[j] == '1':
             invert = True
-
-    #print(i, s)
             
     if int(s, 2) == 98:
         print(n)
-    

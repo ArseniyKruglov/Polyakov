@@ -2,7 +2,7 @@ file = open('Source/24-153.txt', 'r')
 
 look = False
 temp = ''
-c = 0
+count = 0
 
 for char in file.readline():
     if char == 'A':
@@ -14,9 +14,9 @@ for char in file.readline():
     if char == 'F':
         look = False
         if 7 <= len(temp) and len(temp) <= 10:
-            c += 1
+            count += 1
         temp = ''
 
-print(c)
+print(count)
 
 # Ответ не совпадает

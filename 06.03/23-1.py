@@ -12,16 +12,16 @@ def To3(n):
     return s
 
 def F(s):
-    global c
+    global count
     n = int(s, 3)
 
     if s == '10':
-        c += 1
+        count += 1
 
     if n > 20:
         F(To3(n - 2))
         F(s[:-1] + '0')
 
-c = 0
+count = 0
 F('212')
-print(c)
+print(count)

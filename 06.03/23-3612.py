@@ -1,21 +1,21 @@
 def F(n, g):
-    global c
+    global count
     
     if n == g:
-        c += 1
+        count += 1
 
     if n < g:
         F(n + 2, g)
         F(n + 3, g)
         F(int(str(n) + '1'), g)
 
-c = 0
+count = 0
 F(3, 12)
 
-temp = c
-c = 0
+temp = count
+count = 0
 F(12, 25)
 
-print(c * temp)
+print(count * temp)
 
 
