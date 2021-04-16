@@ -1,13 +1,9 @@
 for i in range(1, 256):
-    bin_ = bin(i)[2:]
-    bin_ = '0' * (8 - len(bin_)) + bin_
+    binary = bin(i)[2:]
+    binary = '0' * (8 - len(binary)) + binary
+    binary = binary.replace('0', '2').replace('1', '0').replace('2', '1')
+    binary = int(binary, 2)
+    binary += 1
     
-    bin_r = ''
-    for char in bin_:
-        if char == '0':
-            bin_r += '1'
-        else:
-            bin_r += '0'
-
-    if int(bin_r, 2) + 1 == 221:
+    if binary == 221:
         print(i)

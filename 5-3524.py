@@ -1,4 +1,5 @@
-array = []
+answer = 0
+
 for n in range (1, 100000):
     new_n = ''
     while n > 0:
@@ -6,17 +7,12 @@ for n in range (1, 100000):
         n //= 6
 
     new_n += new_n[-1]
-
     new_n = int(new_n, 6)
-    new_n = bin(new_n)
-    new_n = str(new_n)
+    new_n = bin(new_n)[2:]
     new_n += new_n[-1]
+    new_n = int(new_n, 2)
 
-    array.append(int(new_n, 2))
+    if new_n < 344:
+        answer = new_n
 
-array.sort()
-
-for i in range (0, len(array)):
-    if (array[i] == 344):
-        print(array[i - 1])
-        break
+print(answer)

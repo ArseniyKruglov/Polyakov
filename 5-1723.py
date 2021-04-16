@@ -1,13 +1,13 @@
 import itertools
 
-for i in range(540, 540 + 1):
-    a = []
+for i in range(100, 1000):
+    array = []
     
     for n in list(itertools.permutations(str(i), 2)):
         n = ''.join(n)
         n = int(n)
         if n >= 10:
-            a.append(n)
+            array.append(n)
 
-    if max(a) - min(a) == 14:
+    if max(array) - min(array) == 14:
         print(i)

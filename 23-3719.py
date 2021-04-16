@@ -9,14 +9,14 @@ def F(s):
     n = int(s, 4)
     
     if s == '100':
-        global c
-        c += 1
+        global count
+        count += 1
 
     if n < int('100', 4):
         F(To4(n + 2))
         F(To4(n + 3))
         F(s + '0')
 
-c = 0
+count = 0
 F('1')
-print(c)
+print(count)

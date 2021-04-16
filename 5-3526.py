@@ -1,12 +1,10 @@
-max = 0
+answer = 0
 
 for n in range (1, 256):
-    n8 = ''
-    while (n > 0):
-        n8 = str(n % 8) + n8
-        n //= 8
+    n = bin(n)[2:]
+    n = '0' * (8 - len(n)) + n
+    difference = int(n, 2) - int(n[::-1], 2)
 
-    n8_r = n8[::-1]
-    diff = int(n8, 8) - int(n8_r, 8)
+    answer = max(answer, difference)
 
-    print(diff)
+print(answer)
